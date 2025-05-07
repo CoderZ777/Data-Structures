@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Hashes</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<h1>What is a Hash?</h1>
+<p>A hash can be described a simple data structure that stores key-value pairs. This article will focus on hash security - 
+    how hashes can be used in cryptography. Hashing is a bit like the Enigma machine in WWII. It uses a complicated algorithm 
+    to encode text into an about 30 character code. Computers can then read a hash to find out what a password was. 
+    However, the hash for encoded text is always the same. For example, the hash for password123 is always 
+    <b>42f749ade7f9e195bf475f37a44cafcb</b> no matter what. Because of this, hackers can make a database called a 
+    <em>Rainbow Table</em> that stores common passwords and keys. So, if a hacker finds a hash and plugs it into a rainbow table, 
+    they may have a chance of getting the password.
+</p>
+<img src="../Images/HashExamples.png" width="50%" height="50%" alt="Some example hashes">
+<p><em>An example of a rainbow table</em></p>
+<h1>What is a Salt and Why is it Important?</h1>
+<p>Salts are what can make hashes more powerful by adding a second security measure. A salt is a string of characters added 
+    before a password before it gets hashed, for example <em>1g59</em>(in reality, salts are usually longer than this
+    - usually over 48 bits.) This changes the whole hash of the password, rendering rainbow tables mostly useless. 
+    However, since the salt is typically stored in a computers data, a hacker still might be able to find the salt and get 
+    the password. That being said, a salted hash is typically secure, or at least secure enough to encrypt basic passwords.
+</p>
+<img src="../Images/SaltXample.png" width="50%" height="50%" alt="A diagram depicting a computer hashing and salting">
+<p><em>A diagram showing how a computer salts and hashes, as well as the data it stores</em></p>
+<h1>So, are Salted Hashes Secure?</h1>
+<p>Now that we know what hashes and salts are, the question comes: Are salted hashes secure? It depends on how 
+    secure a program needs to be. For most functions(i.e. your password to common websites, your google account), 
+    salted hashes are sufficient. For a hacker to find your password from these hashes,<br> 1] The hacker would need an 
+    extremely powerful computer<br>2] The hacker would need an extensive amount of time and <br>3] The password would need to 
+    be relatively insecure.<br>With that being said, however, important sections such as bank accounts often use other security 
+    or additional layers of security to protect passwords because of the stakes that come if the password gets cracked.
+</p>
+<br><br><br><br><br><br><br>
+<img src="../Images/EndOPage.gif"><p id="Elegante">Thanks for reading this article! I hope you enjoyed.</p>
+<a class="ToPSize" href="../index.html">Back to main page</a>
+</body>
+</html>

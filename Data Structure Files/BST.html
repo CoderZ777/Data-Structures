@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>BST</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<h1>What is a Binary Search Tree?</h1>
+<p>A binary search tree is a type of data structure that stores numbers 
+    in a specifically sorted order so that these numbers can be efficiently accessed.</p>
+<img src="../Images/BST.png" alt="A binary search tree" width="50%" height="60%">
+
+<details>
+<summary><h2>Psudocode for Binary Search Tree(Click me!)</h2></summary>
+<p id="clickIt"><u>1.class <a href="../Clues/ClueFour.html">B</a>inary Search Tree:<br>
+   2.store an item object called head<br><br><br>
+    3.class Item:<br>
+    4.store an integer called value<br>
+    5.store an item called leftie<br>
+    6.store an item called rightie<br><br><br>
+    7.Function insert item(agruments are head to run on and value to insert):<br>
+    8.If the head is a null, make the head store the value to insert<br>
+    9.If the data is less than the head's data, do this function with the root's left.<br>
+    10.Vice versa for<a href="../Clues/ClueThree.html"> </a>the right.<br><br><br>
+    11.Inorder traversal function(take in the node head)<br>
+    12.If the node <a href="../Clues/ClueOne.html">head</a> is a null, stop this function.<br>
+    13.Do this function again, but with the node head being the current node head's left.<br>
+    14.print this node's data<br>
+    15.Do this fucntion again, but with the node head being the current node head's right.<br>
+    </u></p>
+</details>
+
+<details>
+<summary><h2>Example of Binary Search Tree(Click me!)</h2></summary>
+<p>What the tree looks like:</p>
+<img src="../Images/BST2.png">
+<p>
+make a binary search tree called tree<br>
+insert the number 45<br>
+insert the number 79<br>
+insert the number 15<br>
+insert the number 90<br>
+insert the number 55<br>
+insert the number 10<br>
+insert the number 20<br>
+insert the number 12<br>
+insert the number 50 <br>
+Inorder Traverse<br><br><br>
+OUTPUT:<br>
+10, 12, 15, 20, 45, 50, 55, 79, 90
+</p></details>
+<br><br><br><br><br><br><br>
+<img src="../Images/EndOPage.gif"><p id="Elegante">Thanks for reading this article! I hope you enjoyed.</p>
+<a class="ToPSize" href="../index.html">Back to main page</a>
+</body>
+</html>

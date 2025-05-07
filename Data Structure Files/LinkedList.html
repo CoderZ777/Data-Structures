@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Linked List</title>
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<h1>What is a Linked List?</h1>
+<p>A linked list is a collection of items called Nodes. Each node stores a value as well as another node called 'next'.
+    This is the next item in the list. Chaining all of these Nodes together, all of these items form a rudimentary list.
+</p>
+<img src="../Images/LL.png" alt="A Linked List" width="50%" height="60%">
+
+<details>
+<summary><h2>Psudocode for Linked List(Click me!)</h2></summary>
+<p>
+    1.Class Linked List<br>
+    2.Store a Node called Head<br>
+    3.Store a Node called Tail<br><br><br>
+    4.Class Node<br>
+    5.Store an integer called Value<br>
+    6.Store a Node called Next<br><br><br>
+    7.Function AddItem(arguments: A linked list and a value to add)<br>
+    8.If the linked list has nothing in it, add a head Node storing value and pointing to null<br>
+    9.Otherwise, make the current tail point to a new Node storing the value<br>
+    10.That node becomes the tail<br><br><br>
+    11.Function AddItemAfter(arguments: A linked list called List, a value to add called Value, a node that should be before the adding node called After)<br>
+    12.If the linked list has nothing in it, add a head Node storing value and pointing to null<br>
+    13.And if the tail is the value to add that item after, run function AddItem with Value and stop this function.
+    14.Otherwise, make a new node storing Value and After's next value<br>
+    15.Make after's next value the new Node we made storing value.
+</p>
+</details>
+<details>
+<summary><h2>Example of Linked List(Click me!)</h2></summary>
+<p>What the tree looks like:</p>
+<img src="../Images/BST2.png">
+<p>
+Make a linked list called List<br>
+AddItem 4<br>
+AddItem 6<br>
+AddItem 2<br>
+AddItemAfter 5 after 2<br>
+AddItem 9<br>
+AddItem -2<br>
+AddItemAfter 13 after 6<br>
+AddItemAfter 2 after 13<br>
+Print List's items<br><br><br>
+OUTPUT:<br>
+[4, 6, 13, 2, 2, 5, 9, -2]
+</p></details>
+<br><br><br><br><br><br><br>
+<img src="../Images/EndOPage.gif"><p id="Elegante">Thanks for reading this article! I hope you enjoyed.</p>
+<a class="ToPSize" href="../index.html">Back to main page</a>
+</body>
+</html>
