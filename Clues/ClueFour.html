@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="../styles.css">
+<h1>Basics of C++</h1>
+<p>C++ is a pretty cool programming language. It is one of the most used programs to create robots! Now, isn't that cool?
+    However, it is what we call a "low-level" language. That basically means that it is easy for a computer to digest.
+    High-level programming languages such as python need many different "decoding" steps to break down into something that 
+    a computer can read, c++ doesn't need as many of these steps. Anyways, I don't really need this whole page to talk about 
+    the syntax of the code. Something that is super interesting about C++ is constants. You can read more about them 
+    <a href="https://cplusplus.com/doc/tutorial/constants/">here</a>. And this is the last time I will remind you: everything can be a clue!
+</p>
+
+<br><br><br>
+<h1>The apple of my eye?</h1>
+<p>Did you know that bees make <strong><em>HEX</em></strong>agonal hives?</p>
+<div class="form-container">
+    <form id="answerForm">
+        <label for="answer">The color of my eye:</label><br>
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<br><br><br>
+
+<script>
+    function goToPage(page) {
+    window.location.href = page;
+}
+
+document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent normal form submission
+
+    const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+    const messageDiv = document.getElementById('message');
+
+    // Define correct answers and matching page URLs
+    const correctAnswers = {
+        "#485696": "ClueFive.html",
+        "#1c223b": "ClueFive.html"
+    };
+
+    if (userAnswer in correctAnswers) {
+        messageDiv.textContent = ""; // Clear any previous messages
+        goToPage(correctAnswers[userAnswer]); // Redirect
+    } else {
+        messageDiv.textContent = "What is the hex value of the color of my eyes? When did I tell you the RGB value of my eyes? Remember to make it all lowercase!!!";
+    }
+});
+
+;</script>
+
+

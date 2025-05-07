@@ -1,0 +1,56 @@
+<head>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<p>In case if cases come to case, you can pascal or macro and submit your case. 
+    Camel case and snake case and kebab case and pascal case and macro case 
+    and train case oh my!!! And one more thing, before you go: Burn down all uppercases to their cousins, they aren't welcome here!
+</p>
+<!--<button onclick="goToPage('../index.html')">Hi</button> -->
+<div class="form-container">
+    <form id="answerForm">
+        <label for="answer">When it comes to casing cases, which casing case should you correctly case?</label><br>
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<script>
+    function goToPage(page) {
+    window.location.href = page;
+}
+
+document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent normal form submission
+
+    const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+    const messageDiv = document.getElementById('message');
+
+    // Define correct answers and matching page URLs
+    const correctAnswers = {
+        "camelcase": "ClueTwo.html",
+        "snake_case": "ClueTwo.html",
+        "kebab-case": "ClueTwo.html",
+        "pascalcase": "ClueTwo.html",
+        "macro_case": "ClueTwo.html",
+        "train-case": "ClueTwo.html",
+    };
+
+    if (userAnswer in correctAnswers) {
+        messageDiv.textContent = ""; // Clear any previous messages
+        goToPage(correctAnswers[userAnswer]); // Redirect
+    } else {
+        messageDiv.textContent = "🚫 Wrong keyword. Try again!";
+    }
+});
+
+;</script>
+
+
+
+
+
+
+
+</body>

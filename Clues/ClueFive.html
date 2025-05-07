@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="../styles.css">
+<h1>...</h1>
+<p>The 7th button from the bottom.</p>
+<br><br><br>
+<p>You know when you think you are just so cool inspecting the element on all those websites? 
+    Then the password you need must be here...</p>
+    <img src="../Images/password.png" alt="thatsthequestion" width="25%" height="25%">
+<h1>Access Denied: Password?</h1>
+<div class="form-container">
+    <form id="answerForm">
+        <label for="answer" class="ToPSize">Please enter password to unlock <s>computer</s> next clue</label><br>
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" value="Unlock">
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<br><br><br>
+
+<script>
+    function goToPage(page) {
+    window.location.href = page;
+}
+
+document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent normal form submission
+
+    const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+    const messageDiv = document.getElementById('message');
+
+    // Define correct answers and matching page URLs
+    const correctAnswers = {
+        "thatsthequestion": "ClueSix.html",
+    };
+
+    if (userAnswer in correctAnswers) {
+        messageDiv.textContent = ""; // Clear any previous messages
+        goToPage(correctAnswers[userAnswer]); // Redirect
+    } else {
+        messageDiv.textContent = "Access denied. Please enter password.";
+    }
+});
+
+;</script>

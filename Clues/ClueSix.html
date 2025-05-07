@@ -1,0 +1,50 @@
+<link rel="stylesheet" href="../styles.css">
+<h1>Warm Welcomes</h1>
+<p>Do you remember the day you we<strong>re</strong> the new kid? Remember how scared you felt? That is the whole reason why this article 
+    is here. It is extremely important to <strong>g</strong> everyone a warm welcome in case if they feel how you did. My goal of this 
+    article was to bo<strong>re</strong> you to death, was I succesful? Anyways, I will spare you from any fur<strong>t</strong>
+     information. If you would 
+    like to learn more, I don't have any sources for you.
+</p><br><br><br>
+
+
+<h1>Constant Constants</h1>
+<p>When learning about constants, what is a equal to?</p>
+<div class="form-container">
+    <form id="answerForm">
+        <label for="answer">If you don't know, maybe you should learn about constants.</label><br>
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" value="I know!">
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<br><br><br>
+
+<script>
+    function goToPage(page) {
+    window.location.href = page;
+}
+
+document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent normal form submission
+
+    const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+    const messageDiv = document.getElementById('message');
+
+    // Define correct answers and matching page URLs
+    const correctAnswers = {
+        "5": "ClueSeven.html",
+        "five": "ClueSeven.html"
+
+    };
+
+    if (userAnswer in correctAnswers) {
+        messageDiv.textContent = ""; // Clear any previous messages
+        goToPage(correctAnswers[userAnswer]); // Redirect
+    } else {
+        messageDiv.textContent = "After learning about constants, what is 'a' equal to?";
+    }
+});
+
+;</script>

@@ -1,0 +1,46 @@
+<link rel="stylesheet" href="../styles.css">
+<body>
+<h1>Eleven</h1>
+<p>Hspy te ldvd jzf hstns ejap zq mpp td mplfetqfw, jzf dszfwo lydhpc, esp "mfnvhsple mpp". Ozy'e fdp lyj nlatelwd.</p><br><br><br>
+<h1>You should be shamed</h1>
+<p>Nobody but a fool whould click a button that explicity says, "don't click me". What emotion should you be feeling right now?</p>
+<div class="form-container">
+    <form id="answerForm">
+        <label for="answer" class="ToPSize">What feeling should you feel right now?</label><br>
+        <input type="text" id="answer" name="answer" required>
+        <input type="submit" value="Submit">
+    </form>
+    <div id="message" class="message"></div>
+</div>
+
+<br><br><br>
+
+<script>
+    function goToPage(page) {
+    window.location.href = page;
+}
+
+document.getElementById('answerForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent normal form submission
+
+    const userAnswer = document.getElementById('answer').value.trim().toLowerCase();
+    const messageDiv = document.getElementById('message');
+
+    // Define correct answers and matching page URLs
+    const correctAnswers = {
+        "regret": "ClueTen.html",
+    };
+
+    if (userAnswer in correctAnswers) {
+        messageDiv.textContent = ""; // Clear any previous messages
+        goToPage(correctAnswers[userAnswer]); // Redirect
+    } else {
+        messageDiv.textContent = "Incorrect. You should REally know this...";
+    }
+});
+
+;</script>
+
+
+
+</body>
