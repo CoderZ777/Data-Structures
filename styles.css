@@ -1,0 +1,107 @@
+:root{
+    --base-color: white;
+    --base-variant:white;
+    --text-color:#F24C00;
+    --secondary-text:#FC7A1E;
+    --primary-color:#3a435d;
+    --accent-color:#0071ff;
+
+}
+html{
+    /*background-image: url(Images/SeamlessBG.png);*/
+    background-image: url("Images/SeamlessBG.png");
+    color:#485696;
+    /*color:darkblue;*/
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+p {
+    font-size: 36px;
+}
+h1 {
+    color: black;
+    font-size: 72px;
+}
+h2 {
+    color:black;
+    font-size: 68px;
+}
+h3 {
+    color:black;
+    font-size: 56px;
+}
+h4 {
+    color:black;
+    font-size: 48px;
+}
+h5{
+    color:black;
+    font-size: 36px;
+}
+button {
+    padding: 20px;
+
+}
+
+.ToPSize{
+    font-size: 36px;
+}
+.NiceTitle{
+    font-size: 7rem;
+    font-family: serif;
+    color: #485696;
+    
+
+    text-shadow: -3px -3px 0 #f24c00, 3px -3px 0 #97380d, 3px 3px 0 #f87c43,
+      3px 3px 0 #902d00;
+}
+.OtherNiceTitle {
+    font-size: 7rem;
+    font-family: serif;
+    color:#f24c00;
+    text-shadow: -3px -3px 0 #f79c25, 3px -3px 0 #f9c784, 3px 3px 0 #b39061,
+    3px 3px 0 #ab7c3d;
+}
+#minicooltitle {
+    font-size: 2.75rem;
+        font-family: serif;
+        color: #fc7a1e;
+        
+
+        text-shadow: -2px -2px 0 #f24c00, 2px -2px 0 #a23300, 2px 2px 0 #5e2003,
+          2px 2px 0 #b83d03;
+}
+#minitext {
+    font-size: 18 px;
+
+}
+#imageCredits {
+    font-size:9px;
+}
+#clickIt {
+    color:#0000FF;
+}
+#OtherColor1 {
+    color:#F24C00;
+    font-size: 36px;
+}
+#OtherColor2 {
+    color: #FC7A1E;
+    font-size: 36px;
+}
+#BlackText {
+    color:black
+}
+#Sizepoint {
+    font-size:2px;
+}
+#ULWithout {
+    list-style-type: none;
+}
+#Elegante {
+    font-family: cursive;
+}
+#RedText {
+    color:red;
+}
